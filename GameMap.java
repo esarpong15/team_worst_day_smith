@@ -2,7 +2,7 @@ public class GameMap implements GameMapRequirements {
 
     private House house;
     private AcademicHall academicHall;
-    private DiningHall diningHall;
+    private DinningHall diningHall;
     private Building currentBuilding;
     private Student player;
 
