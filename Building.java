@@ -1,27 +1,22 @@
-import java.util.ArrayList;
 
-public abstract class Building implements BuildingRequirements {
+public class Building implements BuildingRequirements {
 
     protected String name;
     protected String address;
     protected int floors;
-    private ArrayList<Items> items;
+    protected String description;
 
-    public Building(String name, String address, int floors) {
+
+    public Building(String name, String address, int floors, String description) {
         if (name != null) { this.name = name; }
         if (address != null) { this.address = address; } 
         if (floors < 1) {
             throw new RuntimeException("Cannot construct a building with fewer than 1 floor.");
         }
         this.floors = floors;
+        this.description = description;
     }
 
-    /**
-     * Adds an item to the building's inventory
-     */
-    public void addItem(String item) {
-        this.items.add("added item(s) from scanner");
-    }
 
     /**
      * Removes an item from the building's inventory and returns it
@@ -34,6 +29,7 @@ public abstract class Building implements BuildingRequirements {
      * Describes the interior of the building and lists any items present
      */
     public void explore(){
+        System.out.println("Description of Location:\n"+this.description);
     };
 
     /**
@@ -47,18 +43,24 @@ public abstract class Building implements BuildingRequirements {
      * Returns the address of the building
      */
     public String getAddress() {
-        return null;
+        return this.address;
     }
 
     /**
      * Returns the number of floors in the building
      */
     public int getFloors() {
-        return 0;
+        return this.floors;
     }
 
-     public static void main(String[] args) {
-        Building fordHall = new Building("Ford Hall", "100 Green Street Northampton, MA 01063", 4);
-        System.out.println(fordHall);
+    public String toString() {
+        return this.name + " is a " + this.floors + "-story building located at " + this.address;
     }
+
+    public static void main(String[] args) {
+        Building wuertleCenter = new Building("Wuertle Center", "100 Green Street", 2, "The Wurtele Center for Collaborative Leadership serves as a hub that helps students integrate their experiences inside and outside of the classroom.");
+        System.out.println(wuertleCenter);
+        wuertleCenter.explore();
+    }
+
 }
