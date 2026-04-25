@@ -18,7 +18,7 @@ public class Student {
    private String id;
    private double energy;
    private int mood;
-   private ArrayList<Item> inventory;
+   private ArrayList<Item> items;
 
 
    public Student(String name, String id, double energy, int mood) {
@@ -26,7 +26,7 @@ public class Student {
       this.id = id;
       this.energy = energy;
       this.mood = mood;
-      this.inventory = new ArrayList();
+      this.items = new ArrayList();
    }
 
    public String getName() {
@@ -58,14 +58,10 @@ public class Student {
     }
 
    public String toString() {
-      return this.name + " ID: " + this.id + " : " + this.classYear;
+      return this.name + " ID: " + this.id + " Energy: " + this.energy + " Mood : " + this.mood;
    }
 
    public static void main(String[] var0) {
-      Student var1 = new Student("STUDENT", "9909abc", 2014);
-      System.out.println(this.name);
-      hairbrush = new item("hairbrush");
-      item.inventory.add(hairbrush);
-      System.out.println(inventory.items);
+ 
    }
 }
