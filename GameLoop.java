@@ -37,30 +37,35 @@ public class GameLoop {
             if (userResponse.equals("B")){
                 System.out.println("Ok BYE BYE");
                 gameSwitch = false;
-            }
-
-            if (userResponse.equals("A")){
-                System.out.println("Ok, what would you like your name to be?");
-                Scanner nextUserInput = new Scanner(System.in);
-                String playerName = nextUserInput.nextLine();
-                System.out.println("Thank you " + playerName + " Lets get started with your first school day.");
-            }
-            else{
+            }   
+            
+            if ((!userResponse.equals("A")) & (!userResponse.equals("B"))){
                 System.out.println("Yeah so that wasnt an option. Lets restart");
                 gameSwitch = false;
             }
 
+            if (userResponse.equals("A")){
+                System.out.println("Ok, what would you like your name to be?");
+                // Scanner nextUserInput = new Scanner(System.in);
+                String playerName = userInput.nextLine();
+                // PlaceA student constuctor here so the user input still works
+                System.out.println("Thank you " + playerName + ". What kind of mood are you in, on a scale 1-10. 1 being depressed while 10 is over the moon happy");
+                int mood = userInput.nextInt();
+                if (mood >= 1 & mood <= 10){
+                    System.out.println("I see " + playerName +", you're at a " + mood + " number mood today");
+                    System.out.println("Lets start your school day");
+                    gameSwitch = false;
+
+                } else {
+                    System.out.println("Yeah so thats out of range. Im going redirct you to the start so you can undo your mistake");
+                    gameSwitch = false;
+                }
+            }   
+
         } while (gameSwitch);
 
         userInput.close();
-
-
-        
-
-
-
         }
-
     }
 
 
