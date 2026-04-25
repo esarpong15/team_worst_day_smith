@@ -1,3 +1,4 @@
+
 public class Building implements BuildingRequirements {
 
     protected String name;
@@ -16,12 +17,6 @@ public class Building implements BuildingRequirements {
         this.description = description;
     }
 
-    /**
-     * Adds an item to the building's inventory
-     */
-    public void addItem(String item) {
-
-    }
 
     /**
      * Removes an item from the building's inventory and returns it
@@ -35,7 +30,8 @@ public class Building implements BuildingRequirements {
      */
     public void explore(){
         System.out.println("Description of Location:\n"+this.description);
-    }
+    };
+
     /**
      * Returns the name of the building
      */
@@ -60,8 +56,6 @@ public class Building implements BuildingRequirements {
     public String toString() {
         return this.name + " is a " + this.floors + "-story building located at " + this.address;
     }
-
-
 
     public static void main(String[] args) {
         Building wuertleCenter = new Building("Wuertle Center", "100 Green Street", 2, "The Wurtele Center for Collaborative Leadership serves as a hub that helps students integrate their experiences inside and outside of the classroom.");
