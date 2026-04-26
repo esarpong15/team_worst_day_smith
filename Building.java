@@ -58,8 +58,8 @@ public class Building implements BuildingRequirements {
     }
 
     public static void main(String[] args) {
-        Building wuertleCenter = new Building("Wuertle Center", "100 Green Street", 2, "The Wurtele Center for Collaborative Leadership serves as a hub that helps students integrate their experiences inside and outside of the classroom.");
-        System.out.println(wuertleCenter);
+        Building wuertleCenter = new Building("Wuertle Center", "100 Green Street", 2, "The Wurtele Center for Collaborative Leadership serves as a hub that helps students\nintegrate their experiences inside and outside of the classroom.\nYou walk inside. What do you do?");
+        
         wuertleCenter.explore();
     }
 

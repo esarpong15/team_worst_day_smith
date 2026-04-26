@@ -1,4 +1,10 @@
-public class DinningHall implements DinningHallRequirements{
+public class DiningHall extends Building implements DinningHallRequirements{
+    
+    
+    public DiningHall(String name, String address, int floors, String description){
+        super(name, address, floors, description);
+    }
+    
     /**
     * This method would let the user/character eat the food item of their choice 
     * @param foodItem : The string of the food item they will be eating. Likely established by us and not the user but dependent. May be a choice the user gets to make
@@ -34,6 +40,13 @@ public class DinningHall implements DinningHallRequirements{
 	* This function will be of something that most classes have access to as a function available among classes. This function will allow the user to look around the dinning hall as they choose depending on the choices they have 
     */
 	public void explore(){
-
+    System.out.println("Description of Location:\n"+this.description);
     }
+
+public static void main(String[] args) {
+
+    DiningHall cutterZiskind = new DiningHall("Cutter/Ziskind Dining", "10 Prospect St, Northampton, MA 01060",4,"Cutter/Ziskind is a dining hall that serves as the primary location for Kosher and Halal dining on campus.\nYou walk inside, What would you like to do?");
+    cutterZiskind.explore();
+    
+}
 }
