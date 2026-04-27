@@ -4,13 +4,14 @@ public class AcademicHall extends Building implements AcademicalHallRequirements
         super(name, address, floors, description);
     }
 
-
     /**
      * Allows student to take notes during class, while doing this
      * it will positively affect their academic standing
      */
-    public void takeNotes(){
-
+    public void takeNotes(Student student){
+    double currentEnergy = student.getEnergy();
+    student.setEnergy(currentEnergy - 15.0);
+    System.out.println("You decided to take notes during class.\nYour grades are eating, but your sleep schedule isnt :/\nEnergy is now: " + student.getEnergy());
     }
 
     /**
@@ -18,8 +19,10 @@ public class AcademicHall extends Building implements AcademicalHallRequirements
      * while doing this it wont harm their academic standing but it also would 
      * not positively affect it either
      */
-    public void sleepInClass(){
-
+    public void sleepInClass(Student student){
+    double currentEnergy = student.getEnergy();
+    student.setEnergy(currentEnergy + 15.0);
+    System.out.println("You decided to sleep during class!\nZzz... Zzz...\nEnergy is now: " + student.getEnergy());
     }
 
     /**
@@ -40,8 +43,10 @@ public class AcademicHall extends Building implements AcademicalHallRequirements
     }
 
     public static void main(String[] args) {
-        AcademicHall seelyeHall = new AcademicHall("Seelye Hall", "Seelye Hall, 2 Seelye Dr #1, Northampton, MA 01060", 4, "The Wurtele Center for Collaborative Leadership serves as a hub that helps students integrate their experiences inside and outside of the classroom.");
+        AcademicHall seelyeHall = new AcademicHall("Seelye Hall", "Seelye Hall, 2 Seelye Dr #1, Northampton, MA 01060", 4, "This is seelye hall.");
         seelyeHall.explore();
+        Student character = new Student("Megan Thee Stallion","123abc",100.0,50);
+        seelyeHall.takeNotes(character);
 
     }
 

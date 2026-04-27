@@ -1,8 +1,13 @@
 public class House extends Building implements HouseRequirements  {
     
-    
     public House(String name, String address, int floors, String description){
         super(name, address, floors, description);
+    }
+
+    public void takeNap(Student student){
+    double currentEnergy = student.getEnergy();
+    student.setEnergy(currentEnergy + 30.0);
+    System.out.println("You took a nap.\nZzz...Zzz...Zzz...\nEnergy is now: "+student.getEnergy());
     }
     
     /**
@@ -25,9 +30,13 @@ public class House extends Building implements HouseRequirements  {
     System.out.println("Description of Location:\n"+this.description);
     };
 
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
+    
     House parsonsHouse = new House("Parsons", "24 Henshaw Ave",4,"Parsons House is a 4 story house, your room is at the ___ on __ floor.\nYou walk inside your room. What would you like to do?");
+    Student character = new Student("Megan Thee Stallion","123abc",100.0,50);
     parsonsHouse.explore();
+    parsonsHouse.takeNap(character);
+
 }
 }
