@@ -9,8 +9,10 @@ public class DiningHall extends Building implements DinningHallRequirements{
     * This method would let the user/character eat the food item of their choice 
     * @param foodItem : The string of the food item they will be eating. Likely established by us and not the user but dependent. May be a choice the user gets to make
     */
-    public void eatFood(String foodItem){
-
+    public void eatFood(Student student, String foodItem){
+    double currentEnergy = student.getEnergy();
+    student.setEnergy(currentEnergy + 20.0);
+    System.out.println("You've decided to eat: " + foodItem + ".\nEnergy is now: " +student.getEnergy());
     }
 
 
@@ -44,9 +46,10 @@ public class DiningHall extends Building implements DinningHallRequirements{
     }
 
 public static void main(String[] args) {
-
+    Student character = new Student("Megan Thee Stallion","123abc",100.0,50);
     DiningHall cutterZiskind = new DiningHall("Cutter/Ziskind Dining", "10 Prospect St, Northampton, MA 01060",4,"Cutter/Ziskind is a dining hall that serves as the primary location for Kosher and Halal dining on campus.\nYou walk inside, What would you like to do?");
     cutterZiskind.explore();
+    cutterZiskind.eatFood(character, "Pizza");
     
 }
 }

@@ -1,5 +1,5 @@
 interface StudentRequirements {
-    void getName();
+    String getName();
     void checkInventory();
     void addToInventory();
     void Emotion();

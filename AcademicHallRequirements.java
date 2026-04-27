@@ -1,6 +1,6 @@
 interface AcademicalHallRequirements {
-    void takeNotes();
-    void sleepInClass();
+    void takeNotes(Student s);
+    void sleepInClass(Student s);
     void skipClass();
     void explore();
 }
