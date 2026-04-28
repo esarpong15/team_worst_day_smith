@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class GameLoop {
 
-    
 
     public static void main(String[] args) {
 
@@ -59,8 +58,9 @@ public class GameLoop {
                     System.out.println("Lets start your school day");
                     Student StudentPlayer = new Student(playerName, "12345abchehe", energy);
                     System.out.println(fB);
-                    System.out.println("Your name is: " + StudentPlayer.getName()+"\nEnergy level: "+ StudentPlayer.getEnergy() + "\nYou wake up at 8 AM for your 9:25 AM, you're up early!\nYou get dressed and head to the dining hall for breakfast!");
+                    System.out.println("Your name is: " + StudentPlayer.getName()+"\nEnergy level: "+ StudentPlayer.getEnergy());
                     System.out.println(fB);
+                    System.out.println("You wake up at 8 AM for your 9:25 AM, you're up early!\nYou get dressed and head to the dining hall for breakfast!");
                     gameSwitch = false;
 
                 } else {
