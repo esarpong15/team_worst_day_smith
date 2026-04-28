@@ -30,21 +30,14 @@ public class GameLoop {
         System.out.println(fB); 
 
         // Tells you what each option ise and what they do respectivly
-        System.out.println("What would you like to do?");
-        System.out.println("- A : Play\n- B : Quit");
+        // System.out.println("What would you like to do?");
+        // System.out.println("- A : Play\n- B : Quit");
 
         do {
+            // Tells you what each option ise and what they do respectivly
+            System.out.println("What would you like to do?");
+            System.out.println("- A : Play\n- B : Quit");
             userResponse = userInput.nextLine().toUpperCase();
-
-            if (userResponse.equals("B")){
-                System.out.println("Ok BYE BYE");
-                gameSwitch = false;
-            }   
-            
-            if ((!userResponse.equals("A")) & (!userResponse.equals("B"))){
-                System.out.println("Yeah so that wasnt an option. Lets restart");
-                gameSwitch = false;
-            }
 
             if (userResponse.equals("A")){
                 System.out.println("Ok, what would you like your name to be?");
@@ -61,13 +54,40 @@ public class GameLoop {
                     System.out.println("Your name is: " + StudentPlayer.getName()+"\nEnergy level: "+ StudentPlayer.getEnergy());
                     System.out.println(fB);
                     System.out.println("You wake up at 8 AM for your 9:25 AM, you're up early!\nYou get dressed and head to the dining hall for breakfast!");
+                    System.out.println("Choose your breakfast for the day!");
+                    // Interaction 1  // 
+                    System.out.println(" - A : Pierogies, Mushy Blueberries, Last Nights Fried Rice\n- B : Baked Cinnamon French toast (Not Fully Cooked), Cold oatmeal, Roasted Carrots");
+                    String firstPlayerChoice = userInput.nextLine().toUpperCase();
+                    if (firstPlayerChoice.equals("A")){
+
+                    } else if (firstPlayerChoice.equals("B")){
+
+                    } else{
+
+                    } // Could there possibly be some type of while loop you can use to make this work the way it is meant to ?  // 
+
+                    // Interaction 2 // 
+                    System.out.println(" - A : Run for your life\n- B : Hide behind the Smith College sign on Elm");
+                    // Interaction 3 
+                    System.out.println(" - A : \n- B : ");
                     gameSwitch = false;
 
                 } else {
                     System.out.println("Yeah so thats out of range. Im going redirct you to the start so you can undo your mistake");
                     gameSwitch = false;
                 }
-            }   
+            } else if (userResponse.equals("B")){
+                System.out.println("Ok BYE BYE");
+                gameSwitch = false;
+            } else{
+                System.out.println("Yeah so that wasnt an option. Lets restart");
+                //gameSwitch = false;
+            } 
+            
+            // if ((!userResponse.equals("A")) & (!userResponse.equals("B"))){
+            //    System.out.println("Yeah so that wasnt an option. Lets restart");
+                //gameSwitch = false;
+            // }
 
         } while (gameSwitch);
 
