@@ -46,7 +46,7 @@ public class AcademicHall extends Building implements AcademicalHallRequirements
     public static void main(String[] args) {
         AcademicHall seelyeHall = new AcademicHall("Seelye Hall", "Seelye Hall, 2 Seelye Dr #1, Northampton, MA 01060", 4, "This is seelye hall.");
         seelyeHall.explore();
-        Student character = new Student("Megan Thee Stallion","123abc",100.0,50);
+        Student character = new Student("Megan Thee Stallion","123abc",100.0);
         seelyeHall.takeNotes(character);
 
     }
