@@ -49,11 +49,13 @@ public class GameLoop {
                 // Scanner nextUserInput = new Scanner(System.in);
                 String playerName = userInput.nextLine();
                 // PlaceA student constuctor here so the user input still works
-                System.out.println("Thank you " + playerName + ". What kind of mood are you in, on a scale 1-10. 1 being depressed while 10 is over the moon happy");
-                int mood = userInput.nextInt();
-                if (mood >= 1 & mood <= 10){
-                    System.out.println("I see " + playerName +", you're at a " + mood + " number mood today");
+                System.out.println("Thank you " + playerName + ". How is your energy today on a scale of 1 - 100. 100 being extremely energized while 1 is completly drained");
+                double energy = userInput.nextDouble();
+                if (energy >= 1.0 & energy <= 100.0){
+                    System.out.println("I see " + playerName +", you're at a " + energy + " energy level today");
                     System.out.println("Lets start your school day");
+                    Student StudentPlayer = new Student(playerName, "12345abchehe", energy);
+                    System.out.println("f" + StudentPlayer.getName() + StudentPlayer.getEnergy() + "hi");
                     gameSwitch = false;
 
                 } else {
