@@ -38,6 +38,7 @@ public class AcademicHall extends Building implements AcademicalHallRequirements
     /**
 	* This function will be of something that most classes have access to as a function available among classes. This function will allow the user to look around the dinning hall as they choose depending on the choices they have 
     */
+    @Override
 	public void explore(){
     System.out.println("Description of Location:\n"+this.description);
     }

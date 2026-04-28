@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class GameLoop {
 
+    
 
     public static void main(String[] args) {
 
@@ -15,17 +16,19 @@ public class GameLoop {
 
         String userResponse = "";
 
+        //Fancy Border formatting
+        String fB = "---------------------------------------------------";
 
         // Establishes the first line the user will see when entering the game and how to start playing the game
         System.out.println("Welcome to our game,\nplease read out instructions");
 
-        System.out.println("---------------------------------------------------" ); 
+        System.out.println(fB); 
 
 
         // Tells the user what to do in order to play our game properly //
         System.out.println("When playing, you will be given a prompt with options A or B.\nYou are then giving the ability to pick a response, and you can do that by typing either A or B"); 
         
-        System.out.println("---------------------------------------------------" ); 
+        System.out.println(fB); 
 
         // Tells you what each option ise and what they do respectivly
         System.out.println("What would you like to do?");
@@ -55,7 +58,9 @@ public class GameLoop {
                     System.out.println("I see " + playerName +", you're at a " + energy + " energy level today");
                     System.out.println("Lets start your school day");
                     Student StudentPlayer = new Student(playerName, "12345abchehe", energy);
-                    System.out.println("f" + StudentPlayer.getName() + StudentPlayer.getEnergy() + "hi");
+                    System.out.println(fB);
+                    System.out.println("Your name is: " + StudentPlayer.getName()+"\nEnergy level: "+ StudentPlayer.getEnergy() + "\nYou wake up at 8 AM for your 9:25 AM, you're up early!\nYou get dressed and head to the dining hall for breakfast!");
+                    System.out.println(fB);
                     gameSwitch = false;
 
                 } else {
