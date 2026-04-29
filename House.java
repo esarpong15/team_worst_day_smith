@@ -30,13 +30,37 @@ public class House extends Building implements HouseRequirements  {
     System.out.println("Description of Location:\n"+this.description);
     };
 
+    public String goQuad(String options){
+         if (options.equals("A")) {
+            System.out.println("You ran all the way to class but you still got bitten. Time to go to the Schacht Center..");
+            return "You limped your way to the Schacht Center and asked for a rabies shot… They tell you to wait like 5 minutes. \n You wait 5 minutes and grimace.. The whole waiting room is horrified by you. You get called in finally, and limp your way over to the nurse. They give you the shot but then tell you that you'll have to recover the rest of the day.";
+        } 
+            if (options.equals("B")){
+            return "People walk by and look at you weird. You’ve escaped but at what cost? Your face is flushed as you walk into class and take a seat.";
+            }
+            else {
+            return "That wasn't an option, let's try that again..";
+        }
+    }
 
+    public String goHome(String options){
+         if (options.equals("A")) {
+            return "You get some grub, and even have time to catch your friends up on your horrendous morning! Afterwards, you head over to class";
+        } 
+            if (options.equals("B")){
+            return "FAWWK. You overslept because you didn’t set an alarm! Hurry up now get to class!";
+            }
+            else {
+            return "That wasn't an option, let's try that again..";
+        }
+    }
     public static void main(String[] args) {
     
     House parsonsHouse = new House("Parsons", "24 Henshaw Ave",4,"Parsons House is a 4 story house, your room is at the ___ on __ floor.\nYou walk inside your room. What would you like to do?");
-    Student character = new Student("Megan Thee Stallion","123abc",100.0,50);
+    Student character = new Student("Megan Thee Stallion","123abc",100.0);
     parsonsHouse.explore();
     parsonsHouse.takeNap(character);
 
 }
 }
+
