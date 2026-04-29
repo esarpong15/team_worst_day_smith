@@ -57,6 +57,16 @@ public class DiningHall extends Building implements DinningHallRequirements{
         }
     }
 
+    public String headingOver(String options){
+        if (options.equals("A")){
+            return "- A : You position your hand ready to open it up, and close your eyes in anticipation…" ; 
+        } if (options.equals("B")){
+            return "- B : You don’t bother being slow, in one hand you have the scoop and the other on the door handle. *YANK THE DOOR OPEN*" ; 
+        } else{
+            return "That wasn't an option, let's try that again..";
+        }
+    }
+
 public static void main(String[] args) {
     Student character = new Student("Megan Thee Stallion","123abc",100.0);
     DiningHall cutterZiskind = new DiningHall("Cutter/Ziskind Dining", "10 Prospect St, Northampton, MA 01060",4,"Cutter/Ziskind is a dining hall that serves as the primary location for Kosher and Halal dining on campus.\nYou walk inside, What would you like to do?");
