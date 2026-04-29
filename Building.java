@@ -57,10 +57,24 @@ public class Building implements BuildingRequirements {
         return this.name + " is a " + this.floors + "-story building located at " + this.address;
     }
 
-    public static void main(String[] args) {
-        Building wuertleCenter = new Building("Wuertle Center", "100 Green Street", 2, "The Wurtele Center for Collaborative Leadership serves as a hub that helps students\nintegrate their experiences inside and outside of the classroom.\nYou walk inside. What do you do?");
+    public String pickedOptionA(String options){
+        if (options == "A") {
+            return "You limped your way to the Schacht Center and asked for a rabies shot...They tell you to wait like 5 minutes.\nYou wait 5 minutes and grimace... The whole waiting room is horrified by you.\nYou get called in finally, and limp your way over to the nurse. They give you the shot but then tell you that you'll have to recover the rest of the day.";
+        } 
+            if (options == "B") {
+            return " ";
+            }
+            else {
+            return " ";
+        }
         
-        wuertleCenter.explore();
+    }
+
+
+    public static void main(String[] args) {
+        Building wuertleCenter = new Building("Wuertle Center", "100 Green Street", 2, "blah");
+        
+        System.out.println(wuertleCenter.pickedOptionA("A"));
     }
 
 }
