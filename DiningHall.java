@@ -46,10 +46,10 @@ public class DiningHall extends Building implements DinningHallRequirements{
     }
 
     public String pickedOptions(String options){
-        if (options == "A") {
+        if (options.equals("A")) {
             return "Mmmh Piergoies... said no one ever";
         } 
-            if (options == "B") {
+            if (options.equals("B")){
             return "Now why would you willingly choose to have raw food...";
             }
             else {

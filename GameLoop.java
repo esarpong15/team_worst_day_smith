@@ -6,6 +6,11 @@ public class GameLoop {
 
     public static void main(String[] args) {
 
+        // Buildings 
+        DiningHall CZ = new DiningHall("Cutter / ziskind", "Middle of campus", 3, "This is the dinning hall cutter ziskind");
+        // House quad = new House("Quad","Edge of campus", 4, "This is the quad where many students live and tend to sun bath");
+        // AcademicHall seelye = new AcademicHall("Seelye", "Deep in the academic section of campus", 4, "This is the acadmic hall seelye which holds a lot of humanties classes");
+
 
         // This will establish a basic boolean on rather or not the game should run or not // 
         boolean gameSwitch = true; 
@@ -46,6 +51,7 @@ public class GameLoop {
                 // PlaceA student constuctor here so the user input still works
                 System.out.println("Thank you " + playerName + ". How is your energy today on a scale of 1 - 100. 100 being extremely energized while 1 is completly drained");
                 double energy = userInput.nextDouble();
+                userInput.nextLine();
                 if (energy >= 1.0 & energy <= 100.0){
                     System.out.println("I see " + playerName +", you're at a " + energy + " energy level today");
                     System.out.println("Lets start your school day");
@@ -56,20 +62,15 @@ public class GameLoop {
                     System.out.println("You wake up at 8 AM for your 9:25 AM, you're up early!\nYou get dressed and head to the dining hall for breakfast!");
                     System.out.println("Choose your breakfast for the day!");
                     // Interaction 1  // 
-                    System.out.println(" - A : Pierogies, Mushy Blueberries, Last Nights Fried Rice\n- B : Baked Cinnamon French toast (Not Fully Cooked), Cold oatmeal, Roasted Carrots");
+                    System.out.println("- A : Pierogies, Mushy Blueberries, Last Nights Fried Rice\n- B : Baked Cinnamon French toast (Not Fully Cooked), Cold oatmeal, Roasted Carrots");
                     String firstPlayerChoice = userInput.nextLine().toUpperCase();
-                    if (firstPlayerChoice.equals("A")){
-
-                    } else if (firstPlayerChoice.equals("B")){
-
-                    } else{
-
-                    } // Could there possibly be some type of while loop you can use to make this work the way it is meant to ?  // 
+                    System.out.println(CZ.pickedOptions(firstPlayerChoice)); 
+                    // Could there possibly be some type of while loop you can use to make this work the way it is meant to ?  // 
 
                     // Interaction 2 // 
-                    System.out.println(" - A : Run for your life\n- B : Hide behind the Smith College sign on Elm");
+                    // System.out.println(" - A : Run for your life\n- B : Hide behind the Smith College sign on Elm");
                     // Interaction 3 
-                    System.out.println(" - A : \n- B : ");
+                    // System.out.println(" - A : \n- B : ");
                     gameSwitch = false;
 
                 } else {
