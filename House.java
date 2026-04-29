@@ -30,25 +30,30 @@ public class House extends Building implements HouseRequirements  {
     System.out.println("Description of Location:\n"+this.description);
     };
 
-    public String goQuad(String options){
+    public boolean  goQuad(String options){
          if (options.equals("A")) {
-            System.out.println("You ran all the way to class but you still got bitten. Time to go to the Schacht Center..");
-            return "You limped your way to the Schacht Center and asked for a rabies shot… They tell you to wait like 5 minutes. \n You wait 5 minutes and grimace.. The whole waiting room is horrified by you. You get called in finally, and limp your way over to the nurse. They give you the shot but then tell you that you'll have to recover the rest of the day.";
+            System.out.println("You chose A: You ran all the way to class but you still got bitten. Time to go to the Schacht Center..\n");
+            System.out.println("You limped your way to the Schacht Center and asked for a rabies shot... They tell you to wait like 5 minutes. \nYou wait 5 minutes and grimace.. The whole waiting room is horrified by you. \nYou get called in finally, and limp your way over to the nurse. \nThey give you the shot but then tell you that you'll have to recover the rest of the day.\n");
+            System.out.println("***************************************************");
+            System.out.println("                   GAME OVER                          ");
+            System.out.println("***************************************************\n");
+            return false;
         } 
             if (options.equals("B")){
-            return "People walk by and look at you weird. You’ve escaped but at what cost? Your face is flushed as you walk into class and take a seat.";
-            }
-            else {
-            return "That wasn't an option, let's try that again..";
+            System.out.println("You chose B: People walk by and look at you weird. You’ve escaped but at what cost? Time to head to class!");
+            return true; 
+        }else {
+            System.out.println("That wasn't an option, let's try that again..");
+            return true;
         }
     }
 
     public String goHome(String options){
          if (options.equals("A")) {
-            return "You get some grub, and even have time to catch your friends up on your horrendous morning! Afterwards, you head over to class";
+            return "You chose A: You get some grub, and even have time to catch your friends up on your horrendous morning! Afterwards, you head over to class";
         } 
             if (options.equals("B")){
-            return "FAWWK. You overslept because you didn’t set an alarm! Hurry up now get to class!";
+            return "You chose B: FAWWK. You overslept because you didn’t set an alarm! Hurry up now get to class!";
             }
             else {
             return "That wasn't an option, let's try that again..";

@@ -47,10 +47,10 @@ public class DiningHall extends Building implements DinningHallRequirements{
 
     public String pickedOptions(String options){
         if (options.equals("A")) {
-            return "Mmmh Piergoies... said no one ever";
+            return "You chose A: Mmmh Piergoies... said no one ever";
         } 
             if (options.equals("B")){
-            return "Now why would you willingly choose to have raw food...";
+            return "You chose B: Now why would you willingly choose to have raw food...";
             }
             else {
             return "That wasn't an option, let's try that again..";
@@ -59,9 +59,9 @@ public class DiningHall extends Building implements DinningHallRequirements{
 
     public String headingOver(String options){
         if (options.equals("A")){
-            return "- A : You position your hand ready to open it up, and close your eyes in anticipation…" ; 
+            return "You chose A: \nFailure: You open the ice cream lid and find that the ice cream is completely SCRAPED OUT OF BOTH TUBS. Start over?"; 
         } if (options.equals("B")){
-            return "- B : You don’t bother being slow, in one hand you have the scoop and the other on the door handle. *YANK THE DOOR OPEN*" ; 
+            return "You chose B: \nSuccess: You squeal in all your glory at the sight of TWO FULL TUBS OF GREEN TEA ICE CREAM, even though it wasn't listed on the House Menus page!!!" ; 
         } else{
             return "That wasn't an option, let's try that again..";
         }
