@@ -86,7 +86,7 @@ public class GameLoop {
                             // Continuing from here as if the picked option B for the function goQuad 
                             System.out.println(fB);
                             System.out.println("You're at class now and your teacher is yapping up a storm in the front.\n \nYou look to your left, a student fell asleep.\nYou look to your right, a student is diligently taking notes.\nWhat do you want to do?");
-                            System.out.println("- A :  Follow the student on your right and take notes, it’s almost finals season and you lowkey played last semester and can’t risk your GPA anymore.\n- B :  Follow the student on your left, last night was crazy and you were at a Megan Thee Stallion Concert until 3am. It's only right that you catch up on some sleep.");
+                            System.out.println("- A :  Follow the student on your right and take notes, it's almost finals season and you lowkey played last semester and can't risk your GPA anymore.\n- B :  Follow the student on your left, last night was crazy and you were at a Megan Thee Stallion Concert until 3am. It's only right that you catch up on some sleep.");
                             String thirdPlayerChoice = userInput.nextLine().toUpperCase();
                             System.out.println(seelye.goToClass(thirdPlayerChoice));
                             System.out.println(fB);
@@ -103,7 +103,7 @@ public class GameLoop {
                             System.out.println("You make it to your 1:20 - 4:00pm, just a heads up you did have a group final project in this class. Here's your teammates:\n" + 
                                                         "   1. Stoner - Barely shows up to class but always makes sure to do their part in the project.\n" + //
                                                         "   2. Gunther - Overly active in the group chat but never actually does anything.\n" + //
-                                                        "   3. Err (Pronounced Error) - We don’t actually know how they got into this group but we’re vibing.\n \n" + //
+                                                        "   3. Err (Pronounced Error) - We don't actually know how they got into this group but we're vibing.\n \n" + //
                                                         "Who are you sitting next to? (P.S. regardless of the choice Err will be there…)");
                             System.out.println("- A :  You don't really talk with Stoner but think you have a better chance of completing the assignment with them.\n- B :  Gunther is a great conversationalist, maybe you can convince them to lock in?");
                             String fifthPlayerChoice = userInput.nextLine().toUpperCase();
@@ -114,7 +114,7 @@ public class GameLoop {
                                 // Interaction 5 
                                 System.out.println("Great! Now you're halfway through the assignment, when unexpectedly... What's Err doing!\n**Conflict (content): Merge conflict in urMom.md**\nWhen things finally start looking up, there’s now a merge conflict to mess up your day once again.\n");
                                 System.out.println("How are we resolving it?");
-                                System.out.println("- A :  Nope. Nope. NOPE. I’m not dealing with this right now, it’s an issue for later. \n- B :  Merge Conflicts are our friends, let’s fix it!");
+                                System.out.println("- A :  Nope. Nope. NOPE. I'm not dealing with this right now, it's an issue for later. \n- B :  Merge Conflicts are our friends, let's fix it!");
                                 String sixthPlayerChoice = userInput.nextLine().toUpperCase();
                                 System.out.println(seelye.lockedIn(sixthPlayerChoice));
                                 System.out.println(fB);
@@ -126,7 +126,7 @@ public class GameLoop {
                                                             "You walk to the soda machine to grab a drink, when you look to the right of it and see a scoop placed right next to the ice cream freezer. \n" + //
                                                             "The label reads: 'Green Tea Icecream'a");
                                 System.out.println("Do you take the chance to open it up?");
-                                System.out.println("- A :  You position your hand ready to open it up, and close your eyes in anticipation...\n- B :  You don’t bother being slow, in one hand you have the scoop and the other on the door handle. *YANK THE DOOR OPEN*");
+                                System.out.println("- A :  You position your hand ready to open it up, and close your eyes in anticipation...\n- B :  You don't bother being slow, in one hand you have the scoop and the other on the door handle. *YANK THE DOOR OPEN*");
                                 String seventhPlayerChoice = userInput.nextLine().toUpperCase();
                                 System.out.println(CZ.headingOver(seventhPlayerChoice));
                                 System.out.println(fB);
