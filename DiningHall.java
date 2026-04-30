@@ -1,3 +1,8 @@
+import java.io.File;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+
 public class DiningHall extends Building implements DinningHallRequirements{
     
     
@@ -57,10 +62,30 @@ public class DiningHall extends Building implements DinningHallRequirements{
         }
     }
 
+public static void playSound(String soundFile) {
+        try {
+            File file = new File("success.wav");
+            if (file.exists()) {
+                AudioInputStream audioInput = AudioSystem.getAudioInputStream(file);
+                Clip clip = AudioSystem.getClip();
+                clip.open(audioInput);
+                clip.start(); // Plays the sound once
+                
+                // Keep program alive just long enough to play the sound
+                // Thread.sleep(clip.getMicrosecondLength() / 1000); 
+            } else {
+                System.out.println("Audio file not found: " + soundFile);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public String headingOver(String options){
         if (options.equals("A")){
             return "You chose A: \nFailure: You open the ice cream lid and find that the ice cream is completely SCRAPED OUT OF BOTH TUBS. Start over?"; 
         } if (options.equals("B")){
+            playSound("success.wav"); 
             return "You chose B: \nSuccess: You squeal in all your glory at the sight of TWO FULL TUBS OF GREEN TEA ICE CREAM, even though it wasn't listed on the House Menus page!!!" ; 
         } else{
             return "That wasn't an option, let's try that again..";
