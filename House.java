@@ -1,3 +1,6 @@
+import java.io.File; // Added import for audio
+import javax.sound.sampled.*;
+
 public class House extends Building implements HouseRequirements  {
     
     public House(String name, String address, int floors, String description){
@@ -48,16 +51,37 @@ public class House extends Building implements HouseRequirements  {
         }
     }
 
+    public static void playSound(String soundFile) {
+        try {
+            File file = new File("fah.wav");
+            if (file.exists()) {
+                AudioInputStream audioInput = AudioSystem.getAudioInputStream(file);
+                Clip clip = AudioSystem.getClip();
+                clip.open(audioInput);
+                clip.start(); // Plays the sound once
+                
+                // Keep program alive just long enough to play the sound
+                // Thread.sleep(clip.getMicrosecondLength() / 1000); 
+            } else {
+                System.out.println("Audio file not found: " + soundFile);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public String goHome(String options){
          if (options.equals("A")) {
             return "You chose A: You get some grub, and even have time to catch your friends up on your horrendous morning! Afterwards, you head over to class";
         } 
             if (options.equals("B")){
+            playSound("fah.wav"); 
             return "You chose B: FAWWK. You overslept because you didn’t set an alarm! Hurry up now get to class!";
             }
             else {
             return "That wasn't an option, let's try that again..";
         }
+    
     }
     public static void main(String[] args) {
     
