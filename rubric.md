@@ -6,11 +6,11 @@ _____ 2 pts: Submission includes a **cheat sheet** (`cheatsheet.md`) documenting
 
 **YES** 2 pts: Storyline driving the game is **engaging**, and individual elements of play make sense within the context of the story.
 
-**YES** 2 pts: Game has **multiple possible paths / outcomes** (i.e. gameplay depends on player's choices and is not the same every time).
+**YES** 2 pts: Game has **multiple possible paths / outcomes** (i.e. gameplay depends on player's choices and is not the same every time). *** make it so if ppl chose a certain path they can have icecream if not they dont get icecream
 
-_____ 1 pt: Gameplay supports **reversible moves** where reasonable (e.g., if you pick up an object, you should be able to put it back down again later, possibly in a different place; if you go north then you should be able to return to the previous location by going south unless something has blocked your return path).
+**YES**  1 pt: Gameplay supports **reversible moves** where reasonable (e.g., if you pick up an object, you should be able to put it back down again later, possibly in a different place; if you go north then you should be able to return to the previous location by going south unless something has blocked your return path).
 
-_____ 1 pt: Some paths through the game have **restricted access** until the player has completed a task or acquired a specific item (i.e. a key to open a door, etc.).
+_____ 1 pt: Some paths through the game have **restricted access** until the player has completed a task or acquired a specific item (i.e. a key to open a door, etc.). *** DELETE THISS have a fresh up option after taking a nap instead of taking notes
 
 // have it so if someone chose to take a nap (FAWWKKK) theres another option that'll apear to user who went down this path to freshen up and then head to the next part, if they did not choose this they won't see this option and would just head to class.
 ## Back-End Design (10 pts)
