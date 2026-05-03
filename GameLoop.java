@@ -112,7 +112,7 @@ public class GameLoop {
                             } else {
                                 System.out.println(fB);
                                 // Interaction 5 
-                                System.out.println("Great! Now you're halfway through the assignment, when unexpectedly... What's Err doing!\n**Conflict (content): Merge conflict in urMom.md**\nWhen things finally start looking up, there’s now a merge conflict to mess up your day once again.\n");
+                                System.out.println("Great! Now you're halfway through the assignment, when unexpectedly... What's Err doing!\n**Conflict (content): Merge conflict in urMom.md**\nWhen things finally start looking up, there's now a merge conflict to mess up your day once again.\n");
                                 System.out.println("How are we resolving it?");
                                 System.out.println("- A :  Nope. Nope. NOPE. I'm not dealing with this right now, it's an issue for later. \n- B :  Merge Conflicts are our friends, let's fix it!");
                                 String sixthPlayerChoice = userInput.nextLine().toUpperCase();
@@ -121,16 +121,24 @@ public class GameLoop {
 
                                 // Interaction 6
                                 System.out.println("You meet with your group mates at dinner, and the menu for tonight is XXXBeef Straganoff and Heirloom Bean Cassoulet.\n" + //
-                                                            "You sadly grab yourself a plate of some mysterious meat and head back to the table to join your group members. \n" + //
+                                                            "You sadly grab yourself a plate of some mysterious meat and head back to the table. \n" + //
                                                             "You guys managed to finally lock in and finish at 6:45 right before dinner cleanup happens at 7:00. \n" + //
                                                             "You walk to the soda machine to grab a drink, when you look to the right of it and see a scoop placed right next to the ice cream freezer. \n" + //
-                                                            "The label reads: 'Green Tea Icecream'a");
+                                                            "The label reads: 'Green Tea Icecream'");
                                 System.out.println("Do you take the chance to open it up?");
-                                System.out.println("- A :  You position your hand ready to open it up, and close your eyes in anticipation...\n- B :  You don't bother being slow, in one hand you have the scoop and the other on the door handle. *YANK THE DOOR OPEN*");
+                                System.out.println("- A :  You position your hand ready to open it up, and close your eyes in anticipation...\n- B :  You don't bother looking inside the freezeer and go back to your table");
                                 String seventhPlayerChoice = userInput.nextLine().toUpperCase();
-                                System.out.println(CZ.headingOver(seventhPlayerChoice));
-                                System.out.println(fB);
-
+                                if(sixthPlayerChoice.equals("A") && seventhPlayerChoice.equals("A")){
+                                System.out.println("HOW GREEDY! You can't choose to not solve your merge conflict and get icecream. BACK TO THE START!\n");
+                                System.out.println("***************************************************");
+                                System.out.println("                  YOU LOST                         ");
+                                System.out.println("***************************************************");
+                                    gameSwitch = false;
+                                } else {
+                                    System.out.println(CZ.headingOver(seventhPlayerChoice));
+                                    System.out.println(fB);
+                                }
+                                
                             }
                                                     }
                         

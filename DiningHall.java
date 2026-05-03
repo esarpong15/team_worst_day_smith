@@ -83,10 +83,20 @@ public static void playSound(String soundFile) {
 
     public String headingOver(String options){
         if (options.equals("A")){
-            return "You chose A: \nFailure: You open the ice cream lid and find that the ice cream is completely SCRAPED OUT OF BOTH TUBS. Start over?"; 
-        } if (options.equals("B")){
-            playSound("success.wav"); 
-            return "You chose B: \nSuccess: You squeal in all your glory at the sight of TWO FULL TUBS OF GREEN TEA ICE CREAM, even though it wasn't listed on the House Menus page!!!" ; 
+            playSound("success.wav");
+            System.out.println("You chose A: You squeal in all your glory at the sight of TWO FULL TUBS OF GREEN TEA ICE CREAM, even though it wasn't listed on the House Menus page!!!");
+            System.out.println(" ");
+            System.out.println("***************************************************");
+            System.out.println("                   YOU WIN                          ");
+            System.out.println("***************************************************\n");
+            return " "; 
+        } if (options.equals("B")){ 
+            System.out.println("You chose B: You wrap up your session with your team mates and head home, sad, wondering where you went wrong");
+            System.out.println(" ");
+            System.out.println("***************************************************");
+            System.out.println("                  YOU LOST                         ");
+            System.out.println("***************************************************\n");
+            return " "; 
         } else{
             return "That wasn't an option, let's try that again..";
         }
