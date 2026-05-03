@@ -76,16 +76,5 @@ public class Student implements StudentRequirements {
    }
 
 
-   public String toString() {
-      return this.name + " ID: " + this.id + " Energy: " + this.energy;
-   }
-
-   public static void main(String[] args) {
-   Student character = new Student("Megan Thee Stallion","123abc",100.0);
-   System.out.println(character);
-      
-   
-   }
-
 
 }
