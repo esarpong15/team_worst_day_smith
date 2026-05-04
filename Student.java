@@ -8,7 +8,12 @@ public class Student implements StudentRequirements {
    private double energy;
    private ArrayList<Item> items;
 
-
+   /**
+    * Contuctor 
+    * @param name The name the user decides to go by
+    * @param id The ID of the student / user 
+    * @param energy The amount of energy the user says the have as a double
+    */
    public Student(String name, String id, double energy) {
       this.name = name;
       this.id = id;

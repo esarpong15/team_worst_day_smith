@@ -6,7 +6,13 @@ public class Building implements BuildingRequirements {
     protected int floors;
     protected String description;
 
-
+    /**
+     * Contructor 
+     * @param name name of the building 
+     * @param address Adress of the building 
+     * @param floors Number of floors in the building 
+     * @param description Desciprtion of the building 
+     */
     public Building(String name, String address, int floors, String description) {
         if (name != null) { this.name = name; }
         if (address != null) { this.address = address; } 
@@ -16,48 +22,6 @@ public class Building implements BuildingRequirements {
         this.floors = floors;
         this.description = description;
     }
-
-
-    /**
-     * Removes an item from the building's inventory and returns it
-     */
-    public String removeItem(String item) {
-        return null;
-    }
-
-    /**
-     * Describes the interior of the building and lists any items present
-     */
-    public void explore(){
-        System.out.println("Description of Location:\n"+this.description);
-    };
-
-    /**
-     * Returns the name of the building
-     */
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * Returns the address of the building
-     */
-    public String getAddress() {
-        return this.address;
-    }
-
-    /**
-     * Returns the number of floors in the building
-     */
-    public int getFloors() {
-        return this.floors;
-    }
-
-    public String toString() {
-        return this.name + " is a " + this.floors + "-story building located at " + this.address;
-    }
-
-
 
 
     public static void main(String[] args) {

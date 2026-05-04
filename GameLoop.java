@@ -1,6 +1,5 @@
 
 import java.util.Scanner;
-import javax.sound.sampled.SourceDataLine;
 
 public class GameLoop {
 
@@ -14,38 +13,57 @@ public class GameLoop {
         House dorm = new House("dorm","Edge of campus", 4, "Your home, while your at college. Its cute.");
 
 
-
-        // This will establish a basic boolean on rather or not the game should run or not // 
+        /**
+         * This will establish a basic boolean on rather or not the game should run or not
+         */
         boolean gameSwitch = true; 
 
-         // This will establish a basic boolean on rather or not the game should reset or not // 
+        /**
+          * This will establish a basic boolean on rather or not the game should reset or not
+          */
         boolean gameReset = false;
 
-        // Scanner and storage for response // 
+
+        /**
+         * Scanner in and a varible to store the scanners input
+         */
         Scanner userInput = new Scanner(System.in);
 
+        /**
+         * Making the userResponse a varible that is equal to an empty string for the time being 
+         */
         String userResponse = "";
 
-        //Fancy Border formatting
+        
+        /**
+         * Fancy Border formatting
+         */
         String fB = "---------------------------------------------------";
 
-        //Another Fancy Border formatting but only for the beginning;
+        
+        /**
+         * Another Fancy Border formatting but only for the beginning
+         */
         String fB2 = "===================================================";
 
-        // Establishes the first line the user will see when entering the game and how to start playing the game
+        /**
+         *  Establishes the first line the user will see when entering the game and how to start playing the game
+        */
         System.out.println("Welcome to our game,\nplease read out instructions");
 
         System.out.println(fB); 
 
 
-        // Tells the user what to do in order to play our game properly //
+        /**
+         * Tells the user what to do in order to play our game properly
+         */
         System.out.println("When playing, you will be given a prompt with options A or B.\nYou are then giving the ability to pick a response, and you can do that by typing either A or B"); 
         
         System.out.println(fB); 
 
-        // Tells you what each option ise and what they do respectivly
-        // System.out.println("What would you like to do?");
-        // System.out.println("- A : Play\n- B : Quit");
+        /**
+         * This contains the entierity of the game loop and puts everything together in order to establish the game. There are some comments within this long block in order to lavel interaction but everything here is in order to run the bulk of the game as needed 
+         */
         do{
             do {
                 // Tells you what each option ise and what they do respectivly
@@ -55,9 +73,7 @@ public class GameLoop {
 
                 if (userResponse.equals("A")){
                     System.out.println("Ok, what would you like your name to be?");
-                    // Scanner nextUserInput = new Scanner(System.in);
                     String playerName = userInput.nextLine();
-                    // PlaceA student constuctor here so the user input still works
                     System.out.println("Thank you " + playerName + ". How is your energy today on a scale of 1 - 100. 100 being extremely energized while 1 is completly drained");
                     double energy = userInput.nextDouble();
                     userInput.nextLine();
@@ -141,21 +157,6 @@ public class GameLoop {
                                 
                             }
                                                     }
-                        
-                        
-
-                        // If the student were to pick a 
-
-
-
-                        
-
-                        // Could there possibly be some type of while loop you can use to make this work the way it is meant to ?  // 
-
-                        // Interaction 2 // 
-                        // System.out.println(" - A : Run for your life\n- B : Hide behind the Smith College sign on Elm");
-                        // Interaction 3 
-                        // System.out.println(" - A : \n- B : ");
                         gameSwitch = false;
 
                     } else {
@@ -170,10 +171,6 @@ public class GameLoop {
                     //gameSwitch = false;
                 } 
                 
-                // if ((!userResponse.equals("A")) & (!userResponse.equals("B"))){
-                //    System.out.println("Yeah so that wasnt an option. Lets restart");
-                    //gameSwitch = false;
-                // }
 
 
             } while (gameSwitch);
