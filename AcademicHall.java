@@ -1,43 +1,21 @@
 public class AcademicHall extends Building implements AcademicalHallRequirements {
 
-
+    /**
+     * Contrucotr 
+     * @param name The name of the acadmic hall 
+     * @param address The address of the acadmic hall 
+     * @param floors How many floors the acadmic hall has 
+     * @param description Desciption regarding the acadmic hall 
+     */
     public AcademicHall(String name, String address, int floors, String description){
         super(name, address, floors, description);
     }
 
-    /**
-     * Allows student to take notes during class, while doing this
-     * it will positively affect their academic standing
-     */
-    public void takeNotes(Student student){
-    double currentEnergy = student.getEnergy();
-    student.setEnergy(currentEnergy - 15.0);
-    System.out.println("You decided to take notes during class.\nYour grades are eating, but your sleep schedule isnt :/\nEnergy is now: " + student.getEnergy());
-    }
 
     /**
-     * Allows student to catch up on sleep during class,
-     * while doing this it wont harm their academic standing but it also would 
-     * not positively affect it either
-     */
-    public void sleepInClass(Student student){
-    double currentEnergy = student.getEnergy();
-    student.setEnergy(currentEnergy + 15.0);
-    System.out.println("You decided to sleep during class!\nZzz... Zzz...\nEnergy is now: " + student.getEnergy());
-    }
-
-    /**
-     * Allows students to skip their class,
-     * doing this will harm their academic standing but it
-     * it wil increase the fun need.
-     */
-    public void skipClass(){
-
-    }
-
-
-    /**
-	* This function will be of something that most classes have access to as a function available among classes. This function will allow the user to look around the dinning hall as they choose depending on the choices they have 
+    * Method that contains what will happen depending on what the user choices in the interction. This is given regarding if you want to take notes and focus or go to sleep during class 
+    * @param options A or B, which is dependent on the Users input 
+    * @return The string regarding what the reaction leads to
     */
     public String goToClass(String options){
         if (options.equals("A")) {
@@ -51,6 +29,11 @@ public class AcademicHall extends Building implements AcademicalHallRequirements
         }
     }
 
+    /**
+    * Method that contains what will happen depending on what the user choices in the interction. This is given regarding who the user wants to work with. With one option possiblu being a game over 
+    * @param options A or B, which is dependent on the Users input 
+    * @return The string regarding what the reaction leads to. With one return being false to signal that game is over
+    */
     public boolean  headToClassRegardless(String options){
         if (options.equals("A")) {
             System.out.println("You chose A: Great, you and Stoner get along and get the first part of the assignment done, Err hovering over your table and all.");
@@ -70,6 +53,11 @@ public class AcademicHall extends Building implements AcademicalHallRequirements
         }
     }
 
+    /**
+    * Method that contains what will happen depending on what the user choices in the interction. This is given rather or not you decide to work on a merge conflict or not 
+    * @param options A or B, which is dependent on the Users input 
+    * @return The string regarding what the reaction leads to
+    */ 
     public String lockedIn(String options){
         if (options.equals("A")) {
             return "You chose A: And you're so real for that, lets go to dinner to finish the final part of the project!";
@@ -81,6 +69,7 @@ public class AcademicHall extends Building implements AcademicalHallRequirements
             return "That wasn't an option, let's try that again..";
     }
     }
+
 
 
     public static void main(String[] args) {

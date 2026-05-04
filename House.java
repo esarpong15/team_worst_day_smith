@@ -2,7 +2,13 @@ import java.io.File; // Added import for audio
 import javax.sound.sampled.*;
 
 public class House extends Building implements HouseRequirements  {
-    
+    /**
+     * Contructor
+     * @param name The name of the house as a string 
+     * @param address The address of the house as a string 
+     * @param floors The number of floors in the house as a int 
+     * @param description Description about the house as a string 
+     */
     public House(String name, String address, int floors, String description){
         super(name, address, floors, description);
     }
@@ -33,8 +39,13 @@ public class House extends Building implements HouseRequirements  {
     System.out.println("Description of Location:\n"+this.description);
     };
 
+    /**
+     * This is a method that will be called in game loop in order to print the response corsiponding to the users input. This will happen depending on what happenes after the user possibly gets bit by the rabbid cat 
+     * @param options A or B dependin on what the user chooses
+     * @return This will return true or false depending on rather the user continues with the game or losses and will have to be asked to restart or not 
+     */
     public boolean  goQuad(String options){
-         if (options.equals("A")) {
+        if (options.equals("A")) {
             System.out.println("You chose A: You ran all the way to class but you still got bitten. Time to go to the Schacht Center..\n");
             System.out.println("You limped your way to the Schacht Center and asked for a rabies shot... They tell you to wait like 5 minutes. \nYou wait 5 minutes and grimace.. The whole waiting room is horrified by you. \nYou get called in finally, and limp your way over to the nurse. \nThey give you the shot but then tell you that you'll have to recover the rest of the day.\n");
             System.out.println("***************************************************");
@@ -51,6 +62,10 @@ public class House extends Building implements HouseRequirements  {
         }
     }
 
+    /**
+     * This is used to play sound after certain interactions 
+     * @param soundFile The name of the song file
+     */
     public static void playSound(String soundFile) {
         try {
             File file = new File("fah.wav");
@@ -70,6 +85,11 @@ public class House extends Building implements HouseRequirements  {
         }
     }
 
+    /**
+     * This is a method that will be called in game loop in order to print the response corsiponding to the users input. This will be called depnding on if the user decided to take a nap or get up 
+     * @param options A or B dependin on what the user chooses
+     * @return This will return a string corresponding to the users choice 
+     */
     public String goHome(String options){
          if (options.equals("A")) {
             return "You chose A: You get some grub, and even have time to catch your friends up on your horrendous morning! Afterwards, you head over to class";

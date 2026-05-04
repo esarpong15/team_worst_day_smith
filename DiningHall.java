@@ -5,7 +5,13 @@ import javax.sound.sampled.Clip;
 
 public class DiningHall extends Building implements DinningHallRequirements{
     
-    
+    /**
+     * Conructor 
+     * @param name The name of the dinningHall 
+     * @param address Address of the dinningHall 
+     * @param floors The number of floors in the dinningHall 
+     * @param description Desciption of the dinning hall 
+     */
     public DiningHall(String name, String address, int floors, String description){
         super(name, address, floors, description);
     }
@@ -50,6 +56,11 @@ public class DiningHall extends Building implements DinningHallRequirements{
     System.out.println("Description of Location:\n"+this.description);
     }
 
+    /**
+     * This is what will print depending on what the user decided to choose in the interaction. This one is based on what the user/student decides to eat at the dinning hall 
+     * @param options A or B deppending on what the user inputs 
+     * @return The string of what the interaction leads to 
+     */
     public String pickedOptions(String options){
         if (options.equals("A")) {
             return "You chose A: Mmmh Piergoies... said no one ever";
@@ -62,6 +73,10 @@ public class DiningHall extends Building implements DinningHallRequirements{
         }
     }
 
+    /**
+     * This will play an audio on certain interactions for the user to hear 
+     * @param soundFile The name of the sound file 
+     */
 public static void playSound(String soundFile) {
         try {
             File file = new File("success.wav");
@@ -81,6 +96,11 @@ public static void playSound(String soundFile) {
         }
     }
 
+    /**
+     * This is the print depending on what the user will choose. This choice is based on if they get ice cream or not. There is a devation in this depending on a privous choice but that is done within the game loop 
+     * @param options A or B depending on what the user inputs 
+     * @return The print statement 
+     */
     public String headingOver(String options){
         if (options.equals("A")){
             playSound("success.wav");
