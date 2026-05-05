@@ -42,7 +42,7 @@ In Interaction 4, if you choose B (sit next to Gunther), then nothing gets done.
 
 In interactions 5 and 6, if you choose A (ignore the merge conflict) AND A (open the ice cream) you won’t get the ice cream if you didn’t resolve your problems first. You lose.
 
-The restricted path happens when in Interaction 5, you choose A (ignore the merge conflict), which makes you unable to choose option A in Interaction 6. Players who did resolve the conflict (B) during interaction 5 will be able to bypass the . 
+The restricted path happens when in Interaction 5, you choose A (ignore the merge conflict), which makes you unable to choose option A in Interaction 6. Players who did resolve the conflict (B) during interaction 5 will be able to choose option A in Interaction 6. 
 
 ### To reach the best ending: 
 
