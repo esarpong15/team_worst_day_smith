@@ -1,7 +1,5 @@
 interface HouseRequirements {
-    
-    void takeNap(Student student);
-    void takeShower();
-    void inRoom();
-    void explore();
+    boolean goQuad(String options);
+    void playSound(String soundFile);
+    String goHome(String options);
 }

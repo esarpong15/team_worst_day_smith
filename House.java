@@ -13,32 +13,6 @@ public class House extends Building implements HouseRequirements  {
         super(name, address, floors, description);
     }
 
-    public void takeNap(Student student){
-    double currentEnergy = student.getEnergy();
-    student.setEnergy(currentEnergy + 30.0);
-    System.out.println("You took a nap.\nZzz...Zzz...Zzz...\nEnergy is now: "+student.getEnergy());
-    }
-    
-    /**
-     * This function will allow the user to take a shower. This function may effect the students emotions and may change to return that emotion later 
-     */
-    public void takeShower(){
-
-    };
-    /**
-     * This function will establish that the user is in their room. May cause certain things to apear in the terminal 
-     */
-    public void inRoom(){
-
-    };
-
-    /**
-	* This function will be of something that most classes have access to as a function available among classes. This function will allow the user to look around their house as well as what they can do inside of their house while they are there
-    */
-    public void explore(){
-    System.out.println("Description of Location:\n"+this.description);
-    };
-
     /**
      * This is a method that will be called in game loop in order to print the response corsiponding to the users input. This will happen depending on what happenes after the user possibly gets bit by the rabbid cat 
      * @param options A or B dependin on what the user chooses
@@ -66,7 +40,7 @@ public class House extends Building implements HouseRequirements  {
      * This is used to play sound after certain interactions 
      * @param soundFile The name of the song file
      */
-    public static void playSound(String soundFile) {
+    public void playSound(String soundFile) {
         try {
             File file = new File("fah.wav");
             if (file.exists()) {
@@ -91,7 +65,7 @@ public class House extends Building implements HouseRequirements  {
      * @return This will return a string corresponding to the users choice 
      */
     public String goHome(String options){
-         if (options.equals("A")) {
+        if (options.equals("A")) {
             return "You chose A: You get some grub, and even have time to catch your friends up on your horrendous morning! Afterwards, you head over to class";
         } 
             if (options.equals("B")){
@@ -103,13 +77,6 @@ public class House extends Building implements HouseRequirements  {
         }
     
     }
-    public static void main(String[] args) {
-    
-    House parsonsHouse = new House("Parsons", "24 Henshaw Ave",4,"Parsons House is a 4 story house, your room is at the ___ on __ floor.\nYou walk inside your room. What would you like to do?");
-    Student character = new Student("Megan Thee Stallion","123abc",100.0);
-    parsonsHouse.explore();
-    parsonsHouse.takeNap(character);
 
-}
 }
 

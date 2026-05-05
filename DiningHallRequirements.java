@@ -1,8 +1,8 @@
 interface DinningHallRequirements {
-    void eatFood(Student student, String foodItem);
-    public String takeSomething();
-	public String leaveSomething(String whatIsLeft);
-    public void explore();
+    String pickedOptions(String options);
+    void playSound(String soundFile);
+    String headingOver(String options);
+
 }
 
 
