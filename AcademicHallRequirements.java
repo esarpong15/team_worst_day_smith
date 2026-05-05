@@ -1,6 +1,5 @@
 interface AcademicalHallRequirements {
-    void takeNotes(Student s);
-    void sleepInClass(Student s);
-    void skipClass();
-    void explore();
+    String goToClass(String options);
+    boolean headToClassRegardless(String options);
+    String lockedIn(String options);
 }

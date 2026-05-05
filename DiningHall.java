@@ -16,45 +16,6 @@ public class DiningHall extends Building implements DinningHallRequirements{
         super(name, address, floors, description);
     }
     
-    /**
-    * This method would let the user/character eat the food item of their choice 
-    * @param foodItem : The string of the food item they will be eating. Likely established by us and not the user but dependent. May be a choice the user gets to make
-    */
-    public void eatFood(Student student, String foodItem){
-    double currentEnergy = student.getEnergy();
-    student.setEnergy(currentEnergy + 20.0);
-    System.out.println("You've decided to eat: " + foodItem + ".\nEnergy is now: " +student.getEnergy());
-    }
-
-
-	/**
-	* This function will allow the user to take something from the dinning hall. 
-	* This item could be something established by us, with them just having the choice to take something at random, or something the user choices 
-	* @Return : This will return the item they took along side a string to be printed into the terminal so the user will know what they are taking 
-    */
-    public String takeSomething(){
-        return "To be determained";
-    }
-
-
-    /**
-	* this function will allow the user to leave something at the dinning hall
-	* @param whatIsLeft : The item the user left behind in the dinning hall, dependent on what user already has on the user
-	* @Return : This will return the item the item they left behind, maybe by accident at the dining hall 
-    */
-
-	public String leaveSomething(String whatIsLeft){
-        return "To be determained";
-
-    }
-
-
-    /**
-	* This function will be of something that most classes have access to as a function available among classes. This function will allow the user to look around the dinning hall as they choose depending on the choices they have 
-    */
-	public void explore(){
-    System.out.println("Description of Location:\n"+this.description);
-    }
 
     /**
      * This is what will print depending on what the user decided to choose in the interaction. This one is based on what the user/student decides to eat at the dinning hall 
@@ -77,7 +38,7 @@ public class DiningHall extends Building implements DinningHallRequirements{
      * This will play an audio on certain interactions for the user to hear 
      * @param soundFile The name of the sound file 
      */
-public static void playSound(String soundFile) {
+    public void playSound(String soundFile) {
         try {
             File file = new File("success.wav");
             if (file.exists()) {
@@ -122,11 +83,4 @@ public static void playSound(String soundFile) {
         }
     }
 
-public static void main(String[] args) {
-    Student character = new Student("Megan Thee Stallion","123abc",100.0);
-    DiningHall cutterZiskind = new DiningHall("Cutter/Ziskind Dining", "10 Prospect St, Northampton, MA 01060",4,"Cutter/Ziskind is a dining hall that serves as the primary location for Kosher and Halal dining on campus.\nYou walk inside, What would you like to do?");
-    cutterZiskind.explore();
-    cutterZiskind.eatFood(character, "Pizza");
-    
-}
 }

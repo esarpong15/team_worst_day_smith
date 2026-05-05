@@ -1,5 +1,5 @@
 
-public class Building implements BuildingRequirements {
+public class Building {
 
     protected String name;
     protected String address;
@@ -23,10 +23,5 @@ public class Building implements BuildingRequirements {
         this.description = description;
     }
 
-
-    public static void main(String[] args) {
-        Building wuertleCenter = new Building("Wuertle Center", "100 Green Street", 2, "blah");
-        
-    }
 
 }

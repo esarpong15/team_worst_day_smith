@@ -160,33 +160,37 @@ public class GameLoop {
                         gameSwitch = false;
 
                     } else {
+                        // If a user doesn't input a valid answer for the energy question
                         System.out.println("Yeah so thats out of range. Im going redirct you to the start so you can undo your mistake");
                         gameSwitch = false;
                     }
                 } else if (userResponse.equals("B")){
+                    // Closes out the game when user chooses option B
                     System.out.println("Ok BYE BYE");
                     gameSwitch = false;
                 } else{
-                    System.out.println("Yeah so that wasnt an option. Lets restart");
-                    //gameSwitch = false;
+                    // If a user doesn't input a valid answer that was expected
+                    System.out.println("Yeah so that wasnt an option. Lets try again.");
                 } 
                 
 
 
             } while (gameSwitch);
-
+            // Activates the option for a user to restart the game
             System.out.println("Would you like to replay?");
             System.out.println("- A: Yes\n- B: No");
             String playAgain = userInput.nextLine().toUpperCase();
             if(playAgain.equals("A")) {
-                gameReset = true;
+                //When user selects A
+                gameReset = true; //Game will restart
             } else {
                 System.out.println("Ok BYE BYE");
-                gameReset = false;
+                gameReset = false; //Game will not restart
             }
             
         } while (gameReset == true);
-        userInput.close();
+        // Properly closes out the game
+        userInput.close(); //Closes scanner
     }
 }
 
