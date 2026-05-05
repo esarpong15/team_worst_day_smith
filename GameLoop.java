@@ -19,8 +19,8 @@ public class GameLoop {
         boolean gameSwitch = true; 
 
         /**
-          * This will establish a basic boolean on rather or not the game should reset or not
-          */
+         * This will establish a basic boolean on rather or not the game should reset or not
+         */
         boolean gameReset = false;
 
 
